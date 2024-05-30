@@ -7,7 +7,7 @@ const port = 3000;
 const apiUrl = "https://www.googleapis.com/youtube/v3";
 const youtube = google.youtube({
   version: "v3",
-  auth: env.process.API_KEY,
+  auth: process.env.API_KEY,
 });
 
 app.get("/", (req, res) => {

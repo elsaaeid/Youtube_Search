@@ -17,7 +17,7 @@ const [selectedVideo, setSelectedVideo] = useState(null);
 
 
 const onSearchTermChange = term=> {
-  YTSearch({ key: env.process.API_KEY, term: term }, videos => {
+  YTSearch({ key: process.env.API_KEY, term: term }, videos => {
     setVideos(videos);
 
     setSelectedVideo(videos[0])
