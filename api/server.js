@@ -4,11 +4,10 @@ const { google } = require("googleapis");
 
 const app = express();
 const port = 3000;
-const apiKey = env.process.API_KEY;
 const apiUrl = "https://www.googleapis.com/youtube/v3";
 const youtube = google.youtube({
   version: "v3",
-  auth: apiKey,
+  auth: env.process.API_KEY,
 });
 
 app.get("/", (req, res) => {
